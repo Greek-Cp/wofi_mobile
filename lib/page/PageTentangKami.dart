@@ -24,19 +24,22 @@ class _HomePageState extends State<PageTentangKami> {
       "id": "index",
       "title": "Langkah Order",
       "content":
-          "This is the main content of item a. It is very long and you have to expand the tile to see it."
+          """1. Memilih produk yang diinginkan, kemudian melakukan pemesanan 2. Admin akan mengkonfirmasi Anda melalui status pemesanan  "Diterima".3. Ketika status pemesanan “Diterima” maka Anda dapat melanjutkan pembayaran."""
     },
     {
       "id": "index",
       "title": "Syarat dan Kondisi",
       "content":
-          "This is the main content of item a. It is very long and you have to expand the tile to see it."
+          "1. Kami berhak menggunakan foto Anda sebagai bagian promosi kami.\n2. Diluar kecamatan Ambulu, Jember dikenakan biaya transport.\n3. Uang yang sudah telah ditransfer tidak dapat dikembalikan kembali."
     },
     {
       "id": "index",
       "title": "Kontak Kami",
-      "content":
-          "This is the main content of item a. It is very long and you have to expand the tile to see it."
+      "content": """Email        : Fannymanyun26@gmail.com
+Instagram : fanny_makeupwedding
+Tiktok       : fanny_makeup
+Whatsapp : 082161171191 / 082244442422
+Alamat      : Jl. Mangga Karang Templek, Ambulu, Kabupaten Jember, Jawa Timur"""
     }
   ];
   void _removeItem(int id) {
