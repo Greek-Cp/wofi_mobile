@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import 'package:wofi_mobile/const/color.dart';
 import 'package:wofi_mobile/page/PageEditProfile.dart';
 import 'package:wofi_mobile/page/PageTentangKami.dart';
+import 'package:wofi_mobile/provider/ProviderAccount.dart';
 
 class PageAkunSaya extends StatefulWidget {
   static String? routeName = "/PageAkunSaya";
@@ -16,38 +18,46 @@ class _PageAkunSayaState extends State<PageAkunSaya> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    final ProviderAkun = Provider.of<ProviderAccount>(context);
+    String username = ProviderAkun.modelDetailAccount!.nama.toString();
+    String email = ProviderAkun.modelDetailAccount!.email.toString();
+    String noTelepon = ProviderAkun.modelDetailAccount!.noTelepon.toString();
+
     return ScreenUtilInit(builder: (context, child) {
       return Scaffold(
         body: Column(children: [
-          Text(
-              "helo awokwaokwakowakowaokwakowao\nsdsaodsoakdsakoda\nasdkoasokdsa\n"),
-          Card(
-            color: AppColor.colorHeaderAkun,
-            child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.account_circle_outlined,
-                    size: 80,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
+          Padding(
+            padding: EdgeInsets.only(top: 20.sp),
+            child: SafeArea(
+              child: Card(
+                color: AppColor.colorHeaderAkun,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  child: Row(
                     children: [
-                      Text(
-                        "Username",
-                        style: TextStyle(fontSize: 20.sp),
+                      Icon(
+                        Icons.account_circle_outlined,
+                        size: 80,
                       ),
-                      Text(
-                        "Nomor Telepon",
-                        style: TextStyle(fontSize: 10.sp),
-                      ),
-                      Text("Email", style: TextStyle(fontSize: 10.sp)),
-                      Text("Alamat", style: TextStyle(fontSize: 10.sp))
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "$username",
+                            style: TextStyle(fontSize: 20.sp),
+                          ),
+                          Text(
+                            "$noTelepon",
+                            style: TextStyle(fontSize: 10.sp),
+                          ),
+                          Text("$email", style: TextStyle(fontSize: 10.sp)),
+                          Text("Alamat", style: TextStyle(fontSize: 10.sp))
+                        ],
+                      )
                     ],
-                  )
-                ],
+                  ),
+                ),
               ),
             ),
           ),

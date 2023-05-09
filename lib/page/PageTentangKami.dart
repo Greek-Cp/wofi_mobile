@@ -24,7 +24,7 @@ class _HomePageState extends State<PageTentangKami> {
       "id": "index",
       "title": "Langkah Order",
       "content":
-          """1. Memilih produk yang diinginkan, kemudian melakukan pemesanan 2. Admin akan mengkonfirmasi Anda melalui status pemesanan  "Diterima".3. Ketika status pemesanan “Diterima” maka Anda dapat melanjutkan pembayaran."""
+          """1. Memilih produk yang diinginkan, kemudian melakukan pemesanan\n2. Admin akan mengkonfirmasi Anda melalui status pemesanan  "Diterima".\n3. Ketika status pemesanan “Diterima” maka Anda dapat melanjutkan pembayaran."""
     },
     {
       "id": "index",
